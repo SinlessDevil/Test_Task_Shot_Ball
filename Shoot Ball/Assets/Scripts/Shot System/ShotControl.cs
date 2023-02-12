@@ -95,6 +95,7 @@ namespace ShotSystem
             {
                 SoundSystem.AudioClips.Instance.PlayClip(SoundSystem.DictionarSounds.STR_AUDIO_CLIP_SHOOT_BULLET);
                 _bulletFactory.currentBullet.rb.AddForce(_shotDirection.GetDirection().forward * _currentPushForce, ForceMode.Impulse);
+                _bulletFactory.currentBullet.SetDestroyBullet();
                 _bulletFactory.currentBullet = null;
             }
         }

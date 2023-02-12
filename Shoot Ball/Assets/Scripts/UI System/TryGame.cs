@@ -18,6 +18,7 @@ namespace UISystem
         [Space(10)]
         [SerializeField] private Transform _track;
         [SerializeField] private Transform _playerBody;
+        [SerializeField] private Transform _playerTrailEffect;
         [Space(5)]
         [Header("---- UI Componnet ----")]
         [SerializeField] private GameObject _shotPanel;
@@ -33,6 +34,7 @@ namespace UISystem
 
             LogErrorExtensions.LogError(_track);
             LogErrorExtensions.LogError(_playerBody);
+            LogErrorExtensions.LogError(_playerTrailEffect);
 
             LogErrorExtensions.LogError(_shotPanel);
             LogErrorExtensions.LogError(_gamePanel);
@@ -72,11 +74,14 @@ namespace UISystem
             {
                 Vector3 offsetTrack = _track.transform.localScale;
                 Vector3 offsetPlayer = _player.transform.localScale;
+                Vector3 offsetTrail = _playerTrailEffect.transform.localScale;
                 yield return new WaitForSeconds(WAIT_TIME);
                 offsetTrack = new Vector3(offsetTrack.x, offsetTrack.y - 0.2f, offsetTrack.y);
                 offsetPlayer = new Vector3(offsetPlayer.x - 0.1f, offsetPlayer.y - 0.1f, offsetPlayer.x - 0.1f);
+                offsetTrail = new Vector3(offsetTrail.x - 0.1f, offsetTrail.y - 0.1f, offsetTrail.x - 0.1f);
                 _playerBody.DOScale(offsetPlayer, WAIT_TIME);
                 _track.DOScaleY(offsetTrack.y, WAIT_TIME);
+                _playerTrailEffect.DOScale(offsetTrail, WAIT_TIME);
             }
         }
     }

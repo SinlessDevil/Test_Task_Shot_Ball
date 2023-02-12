@@ -33,7 +33,6 @@ namespace EntitySystem
             currentSizeDetection = 2f;
 
             rb = GetComponent<Rigidbody>();
-            StartCoroutine(DestroyGameObjectRoutine());
         }
 
         public override void ApplyChangeSize(float value){
@@ -66,6 +65,11 @@ namespace EntitySystem
         private IEnumerator ContaminationRoutine(){
             yield return new WaitForSeconds(WAIT_TIME_TO_CONTAMINATION);
             OnContaminationObstacleEvent?.Invoke();
+        }
+
+        public void SetDestroyBullet()
+        {
+            StartCoroutine(DestroyGameObjectRoutine());
         }
 
         private IEnumerator DestroyGameObjectRoutine(){
