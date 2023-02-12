@@ -78,7 +78,7 @@ namespace UISystem
                 yield return new WaitForSeconds(WAIT_TIME);
                 offsetTrack = new Vector3(offsetTrack.x, offsetTrack.y - 0.2f, offsetTrack.y);
                 offsetPlayer = new Vector3(offsetPlayer.x - 0.1f, offsetPlayer.y - 0.1f, offsetPlayer.x - 0.1f);
-                offsetTrail = new Vector3(offsetTrail.x - 0.1f, offsetTrail.y - 0.1f, offsetTrail.x - 0.1f);
+                offsetTrail = new Vector3(offsetTrail.x - 0.2f, offsetTrail.y - 0.2f, offsetTrail.x - 0.2f);
                 _playerBody.DOScale(offsetPlayer, WAIT_TIME);
                 _track.DOScaleY(offsetTrack.y, WAIT_TIME);
                 _playerTrailEffect.DOScale(offsetTrail, WAIT_TIME);

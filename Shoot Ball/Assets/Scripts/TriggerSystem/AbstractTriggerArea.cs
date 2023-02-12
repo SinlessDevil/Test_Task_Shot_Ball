@@ -16,7 +16,6 @@ namespace TriggerSystem
         {
             if(other.gameObject.TryGetComponent(out EntitySystem.PlayerSystem.Player player))
             {
-                Debug.Log("Yep");
                 OnEventActive();
             }
         }
