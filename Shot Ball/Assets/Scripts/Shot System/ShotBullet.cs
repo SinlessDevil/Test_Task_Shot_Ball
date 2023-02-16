@@ -50,7 +50,6 @@ namespace ShotSystem
         {
             _currentPushForce += value;
         }
-
         public void SetPushForceByDefould()
         {
             _currentPushForce = _minPushForce;

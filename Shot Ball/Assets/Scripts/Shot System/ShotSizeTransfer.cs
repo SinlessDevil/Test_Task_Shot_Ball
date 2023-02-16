@@ -42,7 +42,6 @@ namespace ShotSystem
                 _bulletFactory.currentBullet.ApplyChangeSize(value);
             }).AddTo(_disposable);
         }
-
         public void SetSizeTransfer(float value)
         {
             if (_bulletFactory.currentBullet != null)
@@ -68,7 +67,6 @@ namespace ShotSystem
             _disposable.Clear();
             StopCoroutine(SizeTransferRoutine());
         }
-
         public void SetSizeTransferByDefould()
         {
             currentSizeTransfer = 0;
