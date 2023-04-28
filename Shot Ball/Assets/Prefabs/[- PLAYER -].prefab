@@ -42,7 +42,7 @@ TrailRenderer:
   m_GameObject: {fileID: 1167845876313539966}
   m_Enabled: 1
   m_CastShadows: 0
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 0
@@ -53,7 +53,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e164f702850be0e4685823481537f0f1, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,7 +105,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 0.89411765, g: 0.5686275, b: 0.14509805, a: 1}
-      key1: {r: 0.89411765, g: 0.5686275, b: 0.14509805, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 1, g: 1, b: 1, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -203,7 +203,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69e39d1b153dbc541a37ecdb873c50b1, type: 2}
+  - {fileID: 2100000, guid: a412075fdf4d5524c84ec64b8952b49a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
